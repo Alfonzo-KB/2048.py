@@ -1,5 +1,6 @@
 #!/usr/bin/python2
-
+//not entirely sure what this does, but I like the way it looks.
+//I wonder what it means by from__future___?  I remember us discussing it in class.
 from __future__ import print_function
 from random import randint
 import sys
@@ -89,8 +90,10 @@ while not (f==tilt_field(f,"w")==tilt_field(f,"a")
         cmd=raw_input(">")
     f2=tilt_field(f,cmd)
     if f2!=f:f=add_random(f2)
+        //if one tile equals 2048, run the following:
     if max_tile(f)==2048:
         print("you win")
         sys.exit(1)
 pprint(f)
 print("you lose")
+print("better luck next time!")
